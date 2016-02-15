@@ -1,0 +1,23 @@
+.acme-navbar-text{
+  color: white;
+}
+
+
+.navbar.navbar-inverse
+{
+  background-color: teal;
+  border-bottom: darken(teal, 20%);
+  margin-bottom: 0;
+
+  &:active
+  {
+
+  }
+
+  .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus
+  {
+    background-color: darken(teal, 10%);
+    border-bottom: 5px solid lighten(teal, 10%);
+  }
+
+}

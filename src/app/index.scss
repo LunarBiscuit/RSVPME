@@ -4,6 +4,10 @@
  */
 $navbar-inverse-link-color: #5AADBB;
 $icon-font-path: "../../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
+$fa-font-path: "../../bower_components/font-awesome/fonts";
+@import "../../bower_components/font-awesome/scss/font-awesome.scss";
+
+$red : #004080;
 
 /**
  *  Do not remove the comments below. It's the markers used by wiredep to inject
@@ -26,6 +30,47 @@ $icon-font-path: "../../bower_components/bootstrap-sass/assets/fonts/bootstrap/"
     width: 50px;
   }
 }
+
+.afterHeader
+{
+  padding-top: 45px;
+}
+
+.lrgFA
+{
+	font-size: 4em;
+}
+
+.mainContainerHero
+{
+  height: 500px;
+  width: 100%;
+  background-color: teal;
+  color: #FFF;
+  animation: slideIn 1s ease-in 1 forwards, bottom-crust 1s 1s 1 linear forwards;
+  position: relative;
+
+}
+
+@keyframes slideIn
+{
+  0%   { top: -300px; }
+  100% { top: 0; }
+}
+
+@keyframes fadeIn
+{
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes bottom-crust
+{
+  0%   { border-bottom: 0; }
+  100% { border-bottom: 15px solid lighten(teal, 15%); }
+}
+
+
 
 /**
  *  Do not remove the comments below. It's the markers used by gulp-inject to inject

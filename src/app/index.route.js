@@ -12,6 +12,11 @@
         controller: 'MainController',
         controllerAs: 'main'
       })
+      .when('/RSVP', {
+        templateUrl: 'app/view/entry/entry.html',
+        controller: 'EntryController',
+        controllerAs: 'vm'
+      })
       .otherwise({
         redirectTo: '/'
       });
