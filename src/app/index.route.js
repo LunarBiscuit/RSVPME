@@ -13,8 +13,13 @@
         controllerAs: 'main'
       })
       .when('/RSVP', {
-        templateUrl: 'app/view/entry/entry.html',
-        controller: 'EntryController',
+        templateUrl: 'app/view/RSVP/RSVP.html',
+        controller: 'RSVPController',
+        controllerAs: 'vm'
+      })
+      .when('/Admin', {
+        templateUrl: 'app/view/admin/Admin.html',
+        controller: 'AdminController',
         controllerAs: 'vm'
       })
       .otherwise({

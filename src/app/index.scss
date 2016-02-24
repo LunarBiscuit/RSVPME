@@ -16,6 +16,23 @@ $red : #004080;
 // bower:scss
 // endbower
 
+body
+{
+  /*background: darken(teal, 8%);*/
+  color: teal;
+
+  legend, label, select, .help-block
+  {
+    color: teal;
+  }
+
+  .well
+  {
+    color :#222;
+  }
+
+}
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -50,6 +67,142 @@ $red : #004080;
   animation: slideIn 1s ease-in 1 forwards, bottom-crust 1s 1s 1 linear forwards;
   position: relative;
 
+  h1
+  {
+
+    font-size: 5rem;
+
+    color: white;
+
+    -webkit-text-stroke: 1px darken(teal, 5%);
+
+    text-shadow:
+    3px 3px 0 darken(teal, 5%),
+    -1px -1px 0 darken(teal, 5%),
+    1px -1px 0 darken(teal, 5%),
+    -1px 1px 0 darken(teal, 5%),
+    1px 1px 0 darken(teal, 5%);
+  }
+
+}
+
+.pulseRing
+{
+  background-color: rgba(255,255,255,0);
+  color: #FFF;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 90px;
+  border-radius: 50%;
+  font-size: 1.8rem;
+
+  border: 5px solid lighten(teal, 5%);
+  animation: pulsate 2s linear alternate infinite;
+  margin: 20px auto;
+
+  &.rsvpRing:before
+  {
+    content: 'RSVP';
+    top: 50px;
+    left: 50%;
+    color: white;
+
+  }
+
+}
+
+.homeContent
+{
+  margin-top: 45px;
+}
+
+.coupleImage
+{
+  position: relative;
+  height: 150px;
+  width: 450px;
+  margin: 0 auto;
+
+  img
+  {
+    position: absolute;
+    max-height: 150px;
+    max-width: 150px;
+    border-radius: 50%;
+
+  }
+
+  img.left
+  {
+    opacity: 0;
+    left: 10px;
+    animation: comeTogetherRight 1s 2s linear 1 forwards, strokeOut 1s 1 forwards;
+  }
+
+  img.right
+  {
+    opacity: 0;
+    right: 10px;
+    animation: comeTogetherLeft 1s 2s linear 1 forwards, strokeOut 1s 1 forwards;
+  }
+}
+
+.handwriting
+{
+  font-family: 'Norican', cursive;
+}
+
+.homeIntro
+{
+  h1
+  {
+    text-align: center;
+    font-size: 2.5rem;
+    animation: fadeIn 1s 3s 1 forwards;
+  }
+}
+
+
+.animate-if.ng-enter, .animate-if.ng-leave {
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+}
+
+.animate-if.ng-enter,
+.animate-if.ng-leave.ng-leave-active {
+  opacity:0;
+}
+
+.animate-if.ng-leave,
+.animate-if.ng-enter.ng-enter-active {
+  opacity:1;
+}
+
+@-webkit-keyframes pulsate {
+  0% {-webkit-transform: scale(0.9, 0.9); border-color: rgba(0,154,154,0);}
+  50% {border-color: rgba(0,154,154,1);}
+  100% {-webkit-transform: scale(1.1, 1.1); border-color: rgba(0,154,154,0);}
+}
+
+@keyframes comeTogetherRight
+{
+  0%   { opacity: 0 }
+  50%  { opacity: 1 }
+  100% { opacity: 1; left: 210px; }
+}
+
+@keyframes comeTogetherLeft
+{
+  0%   { opacity: 0 }
+  50%  { opacity: 1 }
+  100% { opacity: 1; right: 210px; }
+}
+
+@keyframes strokeOut
+{
+  0%   { border: 0 solid #FFF; }
+  100% { border: 4px solid #F5F5F5;}
 }
 
 @keyframes slideIn
@@ -78,3 +231,93 @@ $red : #004080;
  */
 // injector
 // endinjector
+
+
+
+.conf-cont{
+  position:absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width:100%;
+  height:100%;
+  overflow:hidden;
+}
+
+.confetti{
+  position:absolute;
+  width:12px;
+  height:12px;
+  background-color: #f00;
+  opacity:0.0;
+
+  animation-name: fallsway;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-play-state: running;
+
+  @for $i from 1 through 20 {
+    &:nth-child(#{$i}) {
+      z-index: $i;
+      animation-name: fallsway#{$i};
+      animation-delay: (4 / 20) * $i + s;
+        background-color: rgba(0,154, 154,((random(9) + 1)/10));
+    }
+  }
+}
+
+@for $i from 1 through 20 {
+  @keyframes fallsway#{$i} {
+    0%{
+      top:-5%;
+      left:0%+random(95);
+      opacity:1.0;
+      transform:skew(-30deg);
+    }
+    25%{
+      left:100% - random(105);
+      transform:skew(30deg);
+    }
+    50%{
+      left:0% + random(95);
+      transform:skew(-30deg);
+    }
+    75%{
+      left:100% - random(105);
+      transform:skew(30deg);
+    }
+    100% {
+      top:100%;
+      left:0%+random(95);
+      opacity:1.0;
+      transform:skew(-30deg);
+    }
+  }
+}
+
+@keyframes fallsway {
+  0%{
+    top:-10%;
+    left:0%+random(95);
+    opacity:1.0;
+  }
+  25%{
+    left:0%+random(95);
+  }
+  50%{
+    left:0%+random(95);
+  }
+  75%{
+    left:0%+random(95);
+  }
+  100% {
+    top:110%;
+    left:0%+random(95);
+    opacity:1.0;
+  }
+}

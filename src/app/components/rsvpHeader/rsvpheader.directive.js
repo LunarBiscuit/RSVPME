@@ -24,7 +24,6 @@
     function HeaderController(moment, $location) {
       var vm = this;
 
-
       vm.isActive = function (viewLocation) {
 
         return viewLocation === $location.path();

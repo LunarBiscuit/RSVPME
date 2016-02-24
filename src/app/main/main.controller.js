@@ -24,7 +24,7 @@
 
 
     /*function getWebDevTec() {
-      vm.awesomeThings = webDevTec.getTec();
+      vm.awesomeThings = AuthService.getTec();
 
       angular.forEach(vm.awesomeThings, function(awesomeThing) {
         awesomeThing.rank = Math.random();

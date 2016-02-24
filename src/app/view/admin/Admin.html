@@ -1,0 +1,44 @@
+<div ng-controller="AdminController as vm" class="container afterHeader">
+
+  <legend>Administration</legend>
+  <div class="authControls"  ng-hide="vm.isAdmin">
+
+    <div class="col-md-4">
+      <label class="control-label">Enter the passcode to authenticate the request</label>
+    </div>
+    <div class="col-md-8">
+      <input type="text" id="passcodeAuth" ng-model="vm.passcode" class="form-control" name="passcode" />
+    </div>
+
+
+    <div class="col-md-12">
+      <button class="btn btn-primary btn-sm viewData" ng-click="vm.viewData()">Authenticate</button>
+    </div>
+
+  </div>
+
+
+  <div class="col-xs-12 animate-if" ng-if="vm.isAdmin">
+
+    <h2>Submissions</h2>
+
+    <table class="table">
+      <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Surname</th>
+        <th>Dietary Requirements</th>
+      </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="rsvp in vm.submitted">
+          <td>{{rsvp.firstname}}</td>
+          <td>{{rsvp.surname}}</td>
+          <td>{{rsvp.dietaryReq}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+</div>

@@ -1,0 +1,68 @@
+<div ng-controller="RSVPController as vm" class="container afterHeader">
+
+  <form ng-show="vm.showForm" class="form-horizontal">
+    <fieldset>
+
+    <!-- Form Name -->
+    <legend>Authenticate and Submit your RSVP</legend>
+    <div class="well">Please make sure to use the correct passcode otherwise your RSVP will fail. Once you have completed your RSVP you will have access to further information about the event.</div>
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="firstnameinput">First Name</label>  
+      <div class="col-md-4">
+      <input id="firstnameinput" ng-model="vm.firstname" name="firstname" type="text" class="form-control input-md">
+      <span class="help-block">Enter your first name</span>  
+      </div>
+    </div>
+
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="surnameinput">Surname</label>  
+      <div class="col-md-4">
+      <input id="surnameinput" name="surname" type="text" ng-model="vm.surname" class="form-control input-md">
+      <span class="help-block">Enter your surname</span>  
+      </div>
+    </div>
+
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="surnameinput">Dietary Requirements</label>
+      <div class="col-md-4">
+        <textarea id="surnameinput" name="dietaryReq" ng-model="vm.dietaryReq" class="form-control"></textarea>
+        <span class="help-block">Enter your dietary requirements here</span>
+      </div>
+    </div>
+
+    <!-- Password input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="passcodeinput">Passcode</label>
+      <div class="col-md-4">
+        <input id="passcodeinput" name="passcode" ng-model="vm.passcode" type="password" placeholder="" class="form-control input-md">
+        <span class="help-block">Enter the password</span>
+      </div>
+    </div>
+
+    <div class="form-group">
+     
+      <div class="col-md-12 text-center">
+
+        <input id="tokenRequest" name="submitTokenRequest" type="submit" ng-click="vm.submitRSVP()" value="Submit my RSVP" class="btn btn-primary">
+        
+      </div>
+    </div>
+
+      <div class="col-xs-12">
+        Your RSVP will be signed as: <span class="handwriting">{{ vm.firstname }} {{ vm.surname }}</span>
+      </div>
+
+    </fieldset>
+</form>
+
+  <div class="col-xs-12" ng-show="!vm.showForm">
+    <p>
+      We have received your RSVP, Thank you! Here is the basic information for the Wedding. You can navigate through this website to find out more.
+    </p>
+  </div>
+  
+
+</div>

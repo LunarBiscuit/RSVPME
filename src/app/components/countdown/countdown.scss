@@ -1,6 +1,18 @@
 .countdownr
 {
   font-weight: 600;
-  font-size: 4rem;
+  font-size: 5rem;
   animation: fadeIn 2s linear 1 forwards;
+
+  color: white;
+
+  -webkit-text-stroke: 1px darken(teal, 5%);
+
+  text-shadow:
+  3px 3px 0 darken(teal, 5%),
+  -1px -1px 0 darken(teal, 5%),
+  1px -1px 0 darken(teal, 5%),
+  -1px 1px 0 darken(teal, 5%),
+  1px 1px 0 darken(teal, 5%);
+
 }
