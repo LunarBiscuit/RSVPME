@@ -24,12 +24,23 @@
       </div>
     </div>
 
+    <!-- Checkbox input -->
+    <div class="form-group">
+
+      <label class="col-md-4 control-label" for="vegitarian">Vegitarian?</label>
+      <div class="col-md-4">
+        <input id="vegitarian" name="vegitarian" type="checkbox" ng-model="vm.vegitarian" class="custom-checkbox">
+        <label class="checkboxOption" for="vegitarian"><span class="fa fa-check"></span></label>
+        <span class="help-block"></span>
+      </div>
+    </div>
+
     <!-- Text input-->
     <div class="form-group">
       <label class="col-md-4 control-label" for="surnameinput">Dietary Requirements</label>
       <div class="col-md-4">
         <textarea id="surnameinput" name="dietaryReq" ng-model="vm.dietaryReq" class="form-control"></textarea>
-        <span class="help-block">Enter your dietary requirements here</span>
+        <span class="help-block">Enter any dietary requirements here</span>
       </div>
     </div>
 
@@ -51,7 +62,7 @@
       </div>
     </div>
 
-      <div class="col-xs-12">
+      <div class="col-xs-12 hidden">
         Your RSVP will be signed as: <span class="handwriting">{{ vm.firstname }} {{ vm.surname }}</span>
       </div>
 
@@ -60,7 +71,11 @@
 
   <div class="col-xs-12" ng-show="!vm.showForm">
     <p>
-      We have received your RSVP, Thank you! Here is the basic information for the Wedding. You can navigate through this website to find out more.
+      We have received your RSVP, Thank you! You can navigate through this website to find out more about the wedding.
+    </p>
+
+    <p>
+      <a ng-click="vm.resetForm()" class="btn btn-primary">Add another RSVP</a>
     </p>
   </div>
   

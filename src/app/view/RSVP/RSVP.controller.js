@@ -9,9 +9,18 @@
   function RSVPCtrl($http, $log, AuthService, UIState, $firebaseArray) {
 
     var vm = this;
-    vm.firstname  = '';
-    vm.surname = '';
-    vm.passcode = '';
+
+    init();
+
+    function init()
+    {
+      vm.firstname  = '';
+      vm.surname = '';
+      vm.passcode = '';
+      vm.vegitarian = '';
+      vm.dietaryReq = '';
+    }
+
 
     // UI States
     vm.showForm = UIState.rsvpForm;
@@ -19,6 +28,15 @@
 
     // private
     var ref = new Firebase('https://rsvp-me.firebaseIO.com/RSVP');
+
+
+    vm.resetForm = function()
+    {
+      vm.showForm = UIState.rsvpForm = true;
+
+      init();
+
+    }
 
     vm.submitRSVP = function ()
     {
@@ -35,6 +53,7 @@
         rsvps.$add({
           firstname: vm.firstname || null,
           surname: vm.surname || null,
+          vegitarian: vm.vegitarian || null,
           dietaryReq: vm.dietaryReq || null
         }).then(function(ref) {
 

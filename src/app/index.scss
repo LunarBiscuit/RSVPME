@@ -20,6 +20,9 @@ body
 {
   /*background: darken(teal, 8%);*/
   color: teal;
+  background: #f2f2f2;
+  font-family: 'Roboto', sans-serif;
+
 
   legend, label, select, .help-block
   {
@@ -64,7 +67,7 @@ body
   width: 100%;
   background-color: teal;
   color: #FFF;
-  animation: slideIn 1s ease-in 1 forwards, bottom-crust 1s 1s 1 linear forwards;
+  animation: bottom-crust 1s 0s 1 linear forwards;
   position: relative;
 
   h1
@@ -158,10 +161,38 @@ body
 {
   h1
   {
+    opacity: 0;
     text-align: center;
     font-size: 2.5rem;
     animation: fadeIn 1s 3s 1 forwards;
   }
+}
+
+
+/* form styles */
+
+input[type="checkbox"].custom-checkbox
+{
+  position: absolute;
+  clip: rect(0,0,0,0);
+
+}
+
+.checkboxOption
+{
+  color: transparent;
+  background: #666;
+  padding: 0.15em 0.3em;
+  top: 0.25rem;
+  position: relative;
+}
+
+input[type="checkbox"]:checked + label.checkboxOption {
+
+  color: #FFF;
+  background: teal;
+  box-shadow: 0 .1em .3em rgba(0,0,0,.5) inset;
+
 }
 
 

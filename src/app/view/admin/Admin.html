@@ -27,6 +27,7 @@
       <tr>
         <th>First Name</th>
         <th>Surname</th>
+        <th>Vegitarian</th>
         <th>Dietary Requirements</th>
       </tr>
       </thead>
@@ -34,6 +35,7 @@
         <tr ng-repeat="rsvp in vm.submitted">
           <td>{{rsvp.firstname}}</td>
           <td>{{rsvp.surname}}</td>
+          <td>{{rsvp.vegitarian}}</td>
           <td>{{rsvp.dietaryReq}}</td>
         </tr>
       </tbody>
