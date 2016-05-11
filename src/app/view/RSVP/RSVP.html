@@ -4,23 +4,23 @@
     <fieldset>
 
     <!-- Form Name -->
-    <legend>Authenticate and Submit your RSVP</legend>
+    <h1>Authenticate and Submit your RSVP</h1>
     <div class="well">Please make sure to use the correct passcode otherwise your RSVP will fail. Once you have completed your RSVP you will have access to further information about the event.</div>
     <!-- Text input-->
     <div class="form-group">
-      <label class="col-md-4 control-label" for="firstnameinput">First Name</label>  
+      <label class="col-md-4 control-label" for="firstnameinput">First Name</label>
       <div class="col-md-4">
       <input id="firstnameinput" ng-model="vm.firstname" name="firstname" type="text" class="form-control input-md">
-      <span class="help-block">Enter your first name</span>  
+      <span class="help-block">Enter your first name</span>
       </div>
     </div>
 
     <!-- Text input-->
     <div class="form-group">
-      <label class="col-md-4 control-label" for="surnameinput">Surname</label>  
+      <label class="col-md-4 control-label" for="surnameinput">Surname</label>
       <div class="col-md-4">
       <input id="surnameinput" name="surname" type="text" ng-model="vm.surname" class="form-control input-md">
-      <span class="help-block">Enter your surname</span>  
+      <span class="help-block">Enter your surname</span>
       </div>
     </div>
 
@@ -54,11 +54,11 @@
     </div>
 
     <div class="form-group">
-     
+
       <div class="col-md-12 text-center">
 
         <input id="tokenRequest" name="submitTokenRequest" type="submit" ng-click="vm.submitRSVP()" value="Submit my RSVP" class="btn btn-primary">
-        
+
       </div>
     </div>
 
@@ -78,6 +78,6 @@
       <a ng-click="vm.resetForm()" class="btn btn-primary">Add another RSVP</a>
     </p>
   </div>
-  
+
 
 </div>
