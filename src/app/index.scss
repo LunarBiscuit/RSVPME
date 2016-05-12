@@ -307,6 +307,82 @@ input[type="checkbox"]:checked + label.checkboxOption {
 
 
 
+/* info */
+
+
+
+.weddingLocation
+{
+  text-align: center;
+
+  &.needsAuth
+  {
+    border: 5px solid teal;
+
+    padding: 2rem;
+  }
+
+  margin-bottom: 5rem;
+
+}
+
+.information
+{
+
+}
+
+.infoBlock
+{
+  background-size: cover;
+  background-position: 50%  90%;
+  height: 175px;
+  padding: 0;
+  position: relative;
+
+  .infoContainer
+  {
+    background: rgba(0,0,0,0.65);
+    height: 100%;
+    padding: 2rem;
+    word-wrap: break-word;
+
+    @extend .typical-animation;
+
+    h3
+    {
+      margin: 0;
+      margin-bottom: 2.5rem;
+      color: #fffff0;
+      border-left: 0px solid #fffff0;
+    }
+
+    a
+    {
+      color: #fffff0;
+      display: block;
+      font-size: 1.6rem;
+      margin-bottom: 0.5rem;
+
+    }
+
+
+    &:hover
+    {
+      background: rgba(0,0,0,0.5);
+
+      h3
+      {
+        border-left: 5px solid teal;
+        padding-left: 0.5rem;
+      }
+    }
+
+
+  }
+}
+
+
+
 .conf-cont{
   position:absolute;
   top: 0;
@@ -371,6 +447,10 @@ input[type="checkbox"]:checked + label.checkboxOption {
       transform:skew(-30deg);
     }
   }
+}
+
+.typical-animation{
+  transition: all 350ms cubic-bezier(.77,0,.175,1);
 }
 
 @keyframes fallsway {

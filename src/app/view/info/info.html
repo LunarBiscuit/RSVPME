@@ -1,0 +1,173 @@
+<div class="container afterHeader">
+
+  <h1>Useful Information</h1>
+
+  <div class="row">
+
+    <div class="col-xs-12">
+
+
+
+      <h2 class="text-center">Wedding Location</h2>
+      <!-- If they have RSVP'd already then show the location of the wedding-->
+      <div class="col-xs-12 weddingLocation" ng-show="!vm.showForm">
+        <p>
+          Here is the location of the wedding.
+        </p>
+
+        <div>
+          Google Map...
+        </div>
+
+
+      </div>
+
+
+      <!-- If no RSVP, ask for the passcode to show the location of the wedding-->
+      <div class="col-xs-12 weddingLocation needsAuth" ng-show="vm.showForm">
+        <p>
+          Before we can remind you where the wedding is, you need to enter the passcode.
+        </p>
+
+        <p>
+          <input type="text" ng-model="passcodeCheck" />
+        </p>
+        <p><button ng-click="vm.passcodeSubmit()" >Submit</button></p>
+      </div>
+
+      <h2>Local Area</h2>
+
+    </div>
+
+  </div>
+
+
+  <div class='row'>
+
+    <div class="information col-xs-12">
+
+      <div class='infoBlock col-md-12' style="background-image: url('http://cdn.goeuro.com/static_content/web/content/destination/Stratford-upon-avon-header.jpg')">
+
+        <div class="infoContainer">
+
+          <h3>Stratford-upon-Avon</h3>
+
+          <a target='_blank' href="http://www.visitstratforduponavon.co.uk/">www.visitstratforduponavon.co.uk</a>
+          <a target='_blank' href="http://www.stratford-upon-avon.co.uk/">www.stratford-upon-avon.co.uk</a>
+          <a target='_blank' href="https://en.wikipedia.org/wiki/Stratford-upon-Avon">Wikipedia</a>
+
+        </div>
+
+      </div>
+
+      <div class='infoBlock col-md-6' style="background-image: url('http://www.follyfarm.co.uk/open_windows/v12.jpg')">
+
+        <div class="infoContainer">
+
+          <h3>Evesham</h3>
+
+          <a target='_blank' href="http://www.cotswolds.info/places/evesham.shtml">http://www.cotswolds.info/places/evesham.shtml</a>
+          <a target='_blank' href="https://en.wikipedia.org/wiki/Evesham">Wikipedia</a>
+
+        </div>
+
+      </div>
+
+      <div class='infoBlock col-md-6' style="background-image: url('http://www.wlhc.org.uk/images/the-hive-worcester-wlhc.jpg')">
+
+        <div class="infoContainer">
+
+          <h3>Worcester</h3>
+
+          <a target='_blank' href="http://www.visitworcestershire.org/Worcester">http://www.visitworcestershire.org/Worcester</a>
+          <a target='_blank' href="https://en.wikipedia.org/wiki/Worcester">Wikipedia</a>
+
+        </div>
+
+      </div>
+
+      <div class='infoBlock col-md-6' style="background-image: url('http://gardencottagemalvern.co.uk/images/Malvern_Hills.jpg')">
+
+        <div class="infoContainer">
+
+          <h3>Malvern</h3>
+
+          <a target='_blank' href="http://www.visitthemalverns.org/home">http://www.visitthemalverns.org/home</a>
+          <a target='_blank' href="http://www.great-malvern.co.uk">http://www.great-malvern.co.uk</a>
+          <a target='_blank' href="https://en.wikipedia.org/wiki/Malvern,_Worcestershire">Wikipedia</a>
+
+        </div>
+
+      </div>
+
+      <div class='infoBlock col-md-6' style="background-image: url('http://anglotopia.wpengine.netdna-cdn.com/wp-content/uploads/2014/04/VB25395695.jpeg')">
+
+        <div class="infoContainer">
+
+          <h3>Birmingham</h3>
+
+          <a target='_blank' href="http://www.visitbirmingham.com">http://www.visitbirmingham.com</a>
+          <a target='_blank' href="https://en.wikipedia.org/wiki/Birmingham">Wikipedia</a>
+
+        </div>
+
+      </div>
+
+      <div class='infoBlock col-md-4' style="background-image: url('http://ichef.bbci.co.uk/news/660/media/images/81449000/jpg/_81449041_blackhouse---view-to-malverns-credit-paul-lane.jpg')">
+
+        <div class="infoContainer">
+
+          <h3>Worcestershire</h3>
+
+          <a target='_blank' href="http://www.visitworcestershire.org">http://www.visitworcestershire.org</a>
+
+        </div>
+
+      </div>
+
+      <div class='infoBlock col-md-4' style="background-image: url('http://www.thelocalbookkeeper.co.uk/cms/assets/warwick%20castle.jpg')">
+
+        <div class="infoContainer">
+
+          <h3>Warwickshire</h3>
+
+          <a target='_blank' href="http://www.visitcoventryandwarwickshire.co.uk">http://www.visitcoventryandwarwickshire.co.uk</a>
+
+        </div>
+
+      </div>
+
+      <div class='infoBlock col-md-4' style="background-image: url('https://media-cdn.tripadvisor.com/media/photo-s/02/2c/31/f3/best-western-salford.jpg')">
+
+        <div class="infoContainer">
+
+          <h3>Salford Hall</h3>
+
+          <a target='_blank' href="http://www.salfordhall.co.uk/hotel-information/contact-us-and-directions">http://www.salfordhall.co.uk/hotel-information/contact-us-and-directions</a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+  <div class="row">
+
+    <div class='information col-xs-12'>
+
+      <h2>Suppliers</h2>
+
+      <div class='infoBlock col-md-3'>
+        <p>Coming Soon...</p>
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+</div>
