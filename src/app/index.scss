@@ -63,7 +63,7 @@ body
 
 .mainContainerHero
 {
-  height: 500px;
+  min-height: 300px;
   width: 100%;
   background-color: teal;
   color: #FFF;
@@ -166,6 +166,48 @@ body
     font-size: 2.5rem;
     animation: fadeIn 1s 3s 1 forwards;
   }
+}
+
+
+
+.partyMember
+{
+  margin: 0.3rem auto;
+  padding: 0rem;
+  width: 80%;
+
+
+  img
+  {
+    position: relative;
+    max-height: 150px;
+    max-width: 150px;
+    border-radius: 50%;
+  }
+
+  div
+  {
+    margin-top: 3rem;
+    margin-bottom: 6rem;
+
+  }
+
+  .image
+  {
+
+    .right
+    {
+      float: right;
+    }
+
+  }
+
+  .writeup
+  {
+
+    min-height: 150px;
+  }
+
 }
 
 

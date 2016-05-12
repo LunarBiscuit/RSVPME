@@ -12,6 +12,11 @@
         controller: 'MainController',
         controllerAs: 'main'
       })
+      .when('/Party', {
+        templateUrl: 'app/view/party/party.html',
+        controller: 'PartyController',
+        controllerAs: 'vm'
+      })
       .when('/RSVP', {
         templateUrl: 'app/view/RSVP/RSVP.html',
         controller: 'RSVPController',
