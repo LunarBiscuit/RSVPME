@@ -17,6 +17,11 @@
         controller: 'RSVPController',
         controllerAs: 'vm'
       })
+      .when('/WeddingParty', {
+          templateUrl: 'app/view/party/party.html',
+          controller: 'PartyController',
+          controllerAs: 'vm'
+      })
       .when('/Admin', {
         templateUrl: 'app/view/admin/Admin.html',
         controller: 'AdminController',
