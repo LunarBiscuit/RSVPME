@@ -6,21 +6,17 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController($timeout) {
+  function MainController($timeout, $location, $scope, $log) {
     var vm = this;
     vm.classAnimation  = '';
     vm.augText = '';
 
-    activate();
-
-    function activate() 
+    $scope.submitRSVP = function()
     {
+        $log.info('Sending RSVP');
+        $location.path('/RSVP');
 
-      $timeout(function() {
-        vm.classAnimation = 'rubberBand';
-        vm.augText = 'jello';
-      }, 4000);
-    }
+    };
 
 
     /*function getWebDevTec() {
