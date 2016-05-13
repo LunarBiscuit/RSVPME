@@ -19,6 +19,8 @@
       vm.passcode = '';
       vm.vegitarian = '';
       vm.dietaryReq = '';
+
+      vm.errMsg = '';
     }
 
 
@@ -30,16 +32,40 @@
     var ref = new Firebase('https://rsvp-me.firebaseIO.com/RSVP');
 
 
+    function validate()
+    {
+      var valid = true;
+      var validateTargets = ['firstname', 'surname', 'passcode'];
+
+      angular.forEach(validateTargets, function(target, key)
+      {
+          if(!vm[target])
+          {
+            valid = false;
+          }
+      });
+
+      vm.errMsg = (valid) ? '' : 'Something was wrong with your submission. Please check your name and passcode.';
+
+      return valid;
+    }
+
+
     vm.resetForm = function()
     {
       vm.showForm = UIState.rsvpForm = true;
 
       init();
 
-    }
+    };
 
     vm.submitRSVP = function ()
     {
+
+      if(!validate())
+      {
+        return false;
+      }
 
       console.log('Submitting...');
 

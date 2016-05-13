@@ -8,6 +8,8 @@
   background-color: teal;
   border-bottom: darken(teal, 20%);
   margin-bottom: 0;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
 
   &:active
   {
